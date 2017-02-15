@@ -1,6 +1,4 @@
 package com.itheima.tencentqq;
-import java.util.Random;
-
 import android.app.ListActivity;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -17,17 +15,37 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.itheima.tencentqq.R;
 import com.itheima.tencentqq.domain.Cheeses;
 import com.itheima.tencentqq.drag.DragLayout;
-import com.itheima.tencentqq.drag.DragRelativeLayout;
 import com.itheima.tencentqq.drag.DragLayout.Direction;
 import com.itheima.tencentqq.drag.DragLayout.OnDragListener;
 import com.itheima.tencentqq.drag.DragLayout.Status;
+import com.itheima.tencentqq.drag.DragRelativeLayout;
 import com.itheima.tencentqq.swipe.SwipeListAdapter;
 import com.itheima.tencentqq.util.Utils;
 import com.nineoldandroids.view.ViewHelper;
 
+import java.util.Random;
+/**
+ * ============================================================
+ * Copyright：Google有限公司版权所有 (c) 2017
+ * Author：   陈冠杰
+ * Email：    815712739@qq.com
+ * GitHub：   https://github.com/JackChen1999
+ * 博客：     http://blog.csdn.net/axi295309066
+ * 微博：     AndroidDeveloper
+ * <p>
+ * Project_Name：TencentQQ
+ * Package_Name：com.itheima.tencentqq
+ * Version：1.0
+ * time：2016/2/15 16:36
+ * des ：${TODO}
+ * gitVersion：$Rev$
+ * updateAuthor：$Author$
+ * updateDate：$Date$
+ * updateDes：${TODO}
+ * ============================================================
+ **/
 public class MainActivity extends ListActivity implements OnClickListener {
 
 	private DragLayout mDragLayout;

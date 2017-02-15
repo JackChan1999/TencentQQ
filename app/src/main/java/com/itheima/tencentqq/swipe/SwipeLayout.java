@@ -9,17 +9,31 @@ import android.support.v4.view.ViewCompat;
 import android.support.v4.widget.ViewDragHelper;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.view.GestureDetector;
 import android.view.GestureDetector.SimpleOnGestureListener;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
-
 /**
- * 滑动条目布局
- * @author PoplarTang
- *
- */
+ * ============================================================
+ * Copyright：Google有限公司版权所有 (c) 2017
+ * Author：   陈冠杰
+ * Email：    815712739@qq.com
+ * GitHub：   https://github.com/JackChen1999
+ * 博客：     http://blog.csdn.net/axi295309066
+ * 微博：     AndroidDeveloper
+ * <p>
+ * Project_Name：TencentQQ
+ * Package_Name：com.itheima.tencentqq
+ * Version：1.0
+ * time：2016/2/15 16:36
+ * des ：滑动条目布局
+ * gitVersion：$Rev$
+ * updateAuthor：$Author$
+ * updateDate：$Date$
+ * updateDes：${TODO}
+ * ============================================================
+ **/
+
 public class SwipeLayout extends FrameLayout implements SwipeLayoutInterface{
 
 	private static final String TAG = "SwipeLayout";
