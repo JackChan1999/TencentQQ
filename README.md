@@ -1,2 +1,5 @@
 # TencentQQ
-粘性控件，侧滑控件，贝赛尔曲线
+![](https://github.com/JackChen1999/TencentQQ/blob/master/art/qq-1.png
+) ![](https://github.com/JackChen1999/TencentQQ/blob/master/art/qq-2.png)
+
+![](https://github.com/JackChen1999/TencentQQ/blob/master/art/qq-3.png) ![](https://github.com/JackChen1999/TencentQQ/blob/master/art/qq-4.png)
