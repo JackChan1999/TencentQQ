@@ -38,7 +38,7 @@ import com.nineoldandroids.view.ViewHelper;
  **/
 public class DragLayout extends FrameLayout {
 
-	private static final String TAG = "TAG";
+	private static final String TAG = "DragLayout";
 	private View mLeftContent;
 	private View mMainContent;
 	private View mRightContent;
@@ -98,15 +98,15 @@ public class DragLayout extends FrameLayout {
 		public boolean onScroll(MotionEvent e1, MotionEvent e2,
 				float distanceX, float distanceY) {
 			return Math.abs(distanceX) >= Math.abs(distanceY);
-		};
+		}
 	};
 
 	@Override
 	protected void onFinishInflate() {
 		Log.i(TAG, "--onFinishInflate");
-		mLeftContent = (View) getChildAt(0);
+		mLeftContent = getChildAt(0);
 		mRightContent = getChildAt(1);
-		mMainContent = (View) getChildAt(2);
+		mMainContent = getChildAt(2);
 
 	}
 
@@ -226,7 +226,7 @@ public class DragLayout extends FrameLayout {
 
 		@Override
 		public void onViewCaptured(View capturedChild, int activePointerId) {
-		};
+		}
 
 	};
 

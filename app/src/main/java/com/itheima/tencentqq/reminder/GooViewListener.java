@@ -76,8 +76,7 @@ public class GooViewListener implements OnTouchListener, OnDisappearListener {
 
 			point.setVisibility(View.INVISIBLE);
 
-			Log.d("TAG",
-					"rawX: " + event.getRawX() + " rawY: " + event.getRawY());
+			Log.d("TAG", "rawX: " + event.getRawX() + " rawY: " + event.getRawY());
 
 			// 初始化当前点击的item的信息，数字及坐标
 			mGooView.setStatusBarHeight(Utils.getStatusBarHeight(v));
