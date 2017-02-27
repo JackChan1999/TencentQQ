@@ -100,7 +100,7 @@ public class SwipeLayout extends FrameLayout implements SwipeLayoutInterface{
 				// 大于0即可，不会真正限制child的移动范围。
 				// 内部用来计算是否此方向是否可以拖拽，以及释放时动画执行时间
 			return mDragDistance;
-		};
+		}
 		
 		@Override
 		public int clampViewPositionHorizontal(View child, int left, int dx) {
@@ -138,7 +138,7 @@ public class SwipeLayout extends FrameLayout implements SwipeLayoutInterface{
 			}
 			
 			return newLeft;
-		};
+		}
 		
 		@Override
 		public void onViewPositionChanged(View changedView, int left, int top, int dx, int dy) {
@@ -155,7 +155,7 @@ public class SwipeLayout extends FrameLayout implements SwipeLayoutInterface{
 			updateStatus();
 			// 重绘界面
 			invalidate();
-		};
+		}
 
 		@Override
 		public void onViewReleased(View releasedChild, float xvel, float yvel) {
@@ -167,10 +167,8 @@ public class SwipeLayout extends FrameLayout implements SwipeLayoutInterface{
 				processBackViewRelease(xvel,yvel);
 			}
 			invalidate();
-		};
-		
-		
-		
+		}
+
 	};
 	private float mDownX;
 	
@@ -255,7 +253,7 @@ public class SwipeLayout extends FrameLayout implements SwipeLayoutInterface{
 			Rect rect = computeFrontLayout(false);
 			if(mDragHelper.smoothSlideViewTo(getFrontView(), rect.left, rect.top)){
 				ViewCompat.postInvalidateOnAnimation(this);
-			};
+			}
 		} else {
 			layoutContent(false);
 			updateStatus(isNotify);
@@ -279,7 +277,7 @@ public class SwipeLayout extends FrameLayout implements SwipeLayoutInterface{
 			Rect rect = computeFrontLayout(true);
 			if(mDragHelper.smoothSlideViewTo(getFrontView(), rect.left, rect.top)){
 				ViewCompat.postInvalidateOnAnimation(this);
-			};
+			}
 		} else {
 			layoutContent(true);
 			updateStatus(isNotify);
@@ -335,7 +333,7 @@ public class SwipeLayout extends FrameLayout implements SwipeLayoutInterface{
 		// 决定当前的SwipeLayout是否要把touch事件拦截下来，直接交由自己的onTouchEvent处理
 		// 返回true则为拦截
 		return  mDragHelper.shouldInterceptTouchEvent(ev) & mGestureDetector.onTouchEvent(ev);
-	};
+	}
 	
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
@@ -364,6 +362,7 @@ public class SwipeLayout extends FrameLayout implements SwipeLayoutInterface{
 		try {
 			mDragHelper.processTouchEvent(event);
 		} catch (IllegalArgumentException e) {
+			e.printStackTrace();
 		}
 
 		return true;
@@ -410,7 +409,7 @@ public class SwipeLayout extends FrameLayout implements SwipeLayoutInterface{
 		int l = 0, t = 0;
 		if(isOpen){
 			if(mShowEdge == ShowEdge.Left){
-				l = 0 + mDragDistance;
+				l = mDragDistance;
 			}else if (mShowEdge == ShowEdge.Right) {
 				l = 0 - mDragDistance;
 			}
